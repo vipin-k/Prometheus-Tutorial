@@ -1,0 +1,26 @@
+ 1.	useradd -M -s /bin/false prometheus
+ 2.	useradd --no-create-home -s /bin/false node_exporter
+ 3.	sudo mkdir /etc/prometheus
+ 4. sudo mkdir /var/lib/prometheus
+ 5.	sudo chown prometheus:prometheus /var/lib/prometheus
+ 6. sudo chown prometheus:prometheus /etc/prometheus
+ 7.	cd /tmp
+ 8. wget https://github.com/prometheus/prometheus/releases/download/v2.7.2/prometheus-2.7.2.linux-amd64.tar.gz
+ 9.	tar xvf prometheus-2.7.2.linux-amd64.tar.gz
+10. cp prometheus-2.7.2.linux-amd64/prometheus  /usr/local/bin/
+11. cp prometheus-2.7.2.linux-amd64/promtool /usr/local/bin/
+12. sudo chown prometheus:prometheus /usr/local/bin/prometheus
+13. sudo chown prometheus:prometheus /usr/local/bin/promtool
+14. cp -r prometheus-2.7.2.linux-amd64/consoles /etc/prometheus
+15. cp -r prometheus-2.7.2.linux-amd64/console_libraries /etc/prometheus
+16. sudo chown -R prometheus:prometheus /etc/prometheus/
+17. sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
+18. cp prometheus-2.7.2.linux-amd64/prometheus.yml /etc/prometheus
+19. cd prometheus-2.7.2.linux-amd64
+20. cat prometheus.yml
+21. cd /etc/systemd/system
+22. vi prometheus.service
+23. sudo systemctl daemon-reload
+24. sudo systemctl start prometheus
+25. sudo systemctl enable prometheus
+26. sudo systemctl status prometheus
