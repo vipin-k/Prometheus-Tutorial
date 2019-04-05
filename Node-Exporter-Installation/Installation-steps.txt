@@ -1,0 +1,18 @@
+--------------------------Node Exporter--------------------------------------
+cd /opt
+wget https://github.com/prometheus/node_exporter/releases/download/v0.16.0-rc.1/node_exporter-0.16.0-rc.1.linux-amd64.tar.gz
+mv node_exporter-0.16.0-rc.1.linux-amd64 node_exporter
+cd /etc/systemd/system/
+vim node_exporter.service
+systemctl start node_exporter
+systemctl status node_exporter
+free -h
+---------------------------End-----------------------------------
+-------------------------prometheus[master]-------------------
+cd /etc/prometheus/
+mv prometheus.yml prometheus_backup.yml
+vi prometheus.yml
+promtool check config prometheus.yml
+systemctl restart prometheus
+systemctl status prometheus
+------------------------------------------
