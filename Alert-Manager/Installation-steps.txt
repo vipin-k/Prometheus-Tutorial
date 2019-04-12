@@ -1,0 +1,12 @@
+cd /tmp
+wget https://github.com/prometheus/alertmanager/releases/download/v0.16.2/alertmanager-0.16.2.linux-amd64.tar.gz
+tar -xvzf alertmanager-0.16.2.linux-amd64.tar.gz
+mv alertmanager-0.16.2.linux-amd64/alertmanager /usr/local/bin/
+mkdir /etc/alertmanager/
+vim /etc/alertmanager/alertmanager.yml
+vim /etc/prometheus/alert_rules.yml
+vim /etc/systemd/system/alertmanager.service
+vim /etc/prometheus/prometheus.yml
+systemctl daemon-reload
+systemctl start alertmanager
+systemctl status alertmanager
