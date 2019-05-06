@@ -16,7 +16,7 @@
  
  [![](http://img.youtube.com/vi/GiaYg19-OTM/0.jpg)](http://www.youtube.com/watch?v=GiaYg19-OTM "Prometheus - How to setup AlertManager in Prometheus")
  
-<b><u> Connect with me @ </u></b><br>
+<b><u> Connect @ </u></b><br>
 <b> http://YouTube.com/DevopsGuru </b> <br>
 <b> https://www.linkedin.com/in/vipinkumar-gupta/ </b> <br>
 <b> http://vipinkumargupta.com </b> <br>
