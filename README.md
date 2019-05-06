@@ -1,8 +1,8 @@
 # Prometheus-Tutorial-Series
 
-Part 1 - How to install and configure Prometheus monitoring system
-    A. Installation-Step
-    B. prometheus.service file
+Part 1 - How to install and configure Prometheus monitoring system <br>
+    A. Installation-Step <br>
+    B. prometheus.service file <br>
     
  Refer below YouTube vidoes to complete the excerise:
  
