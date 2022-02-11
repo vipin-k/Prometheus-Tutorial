@@ -1,0 +1,9 @@
+name: ALTEN Frontend DEV CI&CD setup
+on:
+  push:
+  
+jobs:
+  deploy:
+    - name: list
+      run: ls
+        
