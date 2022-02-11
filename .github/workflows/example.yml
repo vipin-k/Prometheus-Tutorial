@@ -1,0 +1,14 @@
+name: ALTEN Frontend DEV CI&CD setup
+on:
+  push:  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: deploy
+      run: npm install        
