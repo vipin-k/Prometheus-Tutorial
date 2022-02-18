@@ -11,7 +11,7 @@ jobs:
       with:
         node-version: '12.x'
         
-     - name: deploy
+    - name: deploy
       run: npm install        
     - name: Notify dedicated teams channel
       uses: jdcargile/ms-teams-notification@v1.3
