@@ -11,13 +11,13 @@ jobs:
       with:
         node-version: '12.x'
         
-    - name: deploy
+     - name: deploy
       run: npm install        
     - name: Notify dedicated teams channel
       uses: jdcargile/ms-teams-notification@v1.3
       with:
         github-token: ${{ github.token }} # this will use the runner's token.
         ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
-        notification-summary: Your custom notification message 
+        notification-summary: deployment notification 
         notification-color: 17a2b8
-        timezone: America/Denver
+        timezone: Asia/Singapore
