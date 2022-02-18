@@ -1,6 +1,7 @@
 name: ALTEN Frontend DEV CI&CD setup
 on:
   push:  
+permissions: read-all|write-all
 # permissions:
 #   actions: read|write|none
 #   checks: read|write|none
